@@ -60,3 +60,44 @@ class Page1 extends StatelessWidget {
     );
   }
 }
+
+/*
+import 'package:flutter/material.dart';
+
+class Page1 extends StatefulWidget {
+  const Page1({super.key});
+
+  @override
+  State<Page1> createState() => _Page1State();
+}
+
+class _Page1State extends State<Page1> {
+  @override
+  Widget build(BuildContext context) {
+    int index = 0;
+    List<Widget> myPages = <Widget>[const Text("Page1"), const Text("Page2")];
+    return Scaffold(
+      body: Center(child: myPages[index]),
+      bottomNavigationBar: NavigationBar(
+        destinations: const [
+          NavigationDestination(
+            icon: Icon(Icons.home),
+            label: "Page1",
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.settings),
+            label: "Page2",
+          ),
+        ],
+        onDestinationSelected: (value) {
+          print(value);
+          index = value;
+
+          setState(() {});
+        },
+      ),
+    );
+  }
+}
+
+*/
