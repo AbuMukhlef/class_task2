@@ -20,32 +20,41 @@ class Page1 extends StatelessWidget {
                 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png'),
           ),
           const SizedBox(height: 50),
-          DefaultTabController(
-            length: 2,
-            child: Container(
-                height: 450,
-                width: 500,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                      color: const Color.fromARGB(255, 214, 211, 203),
-                      width: 5),
-                  borderRadius: const BorderRadius.all(Radius.circular(20)),
-                  color: const Color.fromARGB(255, 231, 234, 227),
-                ),
-                child: const Column(
+          Container(
+              height: 450,
+              width: 500,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                border: Border.all(
+                    color: const Color.fromARGB(255, 214, 211, 203), width: 5),
+                borderRadius: const BorderRadius.all(Radius.circular(20)),
+                color: const Color.fromARGB(255, 231, 234, 227),
+              ),
+              child: const DefaultTabController(
+                length: 2,
+                child: Column(
                   children: [
                     TabBar(tabs: [
                       Tab(
-                        text: 'Profile',
+                        text: 'Information',
                       ),
                       Tab(
-                        text: 'Edit Profile',
+                        text: 'Future Projects',
                       ),
                     ]),
+                    Flexible(
+                      child: TabBarView(children: [
+                        Text('Abdullah Mukhlef Al-Shammari',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 85, 82, 82))),
+                        Text('Enshedny',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 85, 82, 82))),
+                      ]),
+                    )
                   ],
-                )),
-          ),
+                ),
+              )),
         ],
       ),
     );
