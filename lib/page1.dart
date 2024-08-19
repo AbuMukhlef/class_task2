@@ -10,34 +10,29 @@ class Page1 extends StatelessWidget {
         title: const Text('Profile', style: TextStyle(color: Colors.white)),
         backgroundColor: const Color.fromARGB(255, 156, 159, 161),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Expanded(
-              child: CircleAvatar(
-                radius: 80.0,
-                child: Image.network(
-                    'https://cdn-icons-png.flaticon.com/512/3135/3135715.png'),
+      body: Column(
+        children: [
+          CircleAvatar(
+            radius: 80.0,
+            child: Image.network(
+                'https://cdn-icons-png.flaticon.com/512/3135/3135715.png'),
+          ),
+          Container(
+            height: 100,
+            width: 500,
+            alignment: Alignment.center,
+            decoration: const BoxDecoration(
+              color: Color.fromARGB(255, 156, 159, 161),
+            ),
+            child: const Text(
+              'Profile',
+              style: TextStyle(
+                fontSize: 40.0,
+                fontWeight: FontWeight.bold,
               ),
             ),
-            Container(
-              height: 100,
-              width: 500,
-              alignment: Alignment.center,
-              decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 156, 159, 161),
-              ),
-              child: const Text(
-                'Profile',
-                style: TextStyle(
-                  fontSize: 40.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
